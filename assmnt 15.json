@@ -1,0 +1,11 @@
+{
+"SELECT s.store_id,SUM(p.amount) AS total_revenue\r\nFROM payment p\r\nJOIN customer c ON p.customer_id = c.customer_id\r\nJOIN store s ON c.store_id = s.store_id\r\nGROUP BY s.store_id": [
+	{
+		"store_id" : 1,
+		"total_revenue" : 33621.42
+	},
+	{
+		"store_id" : 2,
+		"total_revenue" : 27690.62
+	}
+]}
